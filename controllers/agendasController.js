@@ -4,7 +4,10 @@ const db = require("../database/connection");
 module.exports = {
     async listarAgendas(request,response) {
         try {
-            return response.status(200).json({confirma: 'Agendas'});
+            const sql = 'SELECT agd_id, pess_id, serv_id, agd_dia, agd_horario, agd_pagamento FROM agendas';
+            const agendas = await db.query(sql);
+            //console.log('tam: ' + instituicoes[0].leight)
+            return response.status(200).json(agendas[0]);
         } catch (error) {
             return response.status(500).json({confirma: 'Erro', message: error});
         }
