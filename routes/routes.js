@@ -11,41 +11,41 @@ const TelefonesController = require('../controllers/telefonesController');
 
 
 // definição de rotas
-router.get('/agendas', AgendasController.listarAgendas);
-// cadastrar
-// editar
-// excluir
+router.get("/Agendas", AgendasController.listarAgendas); //Listar
+router.post("/Agendas", AgendasController.CadastroAgendas); //Cadastro
+router.patch("/Agendas", AgendasController.EditarAgendas); //Editar
+router.delete("/Agendas", AgendasController.ExcluirAgendas); //Excluir
 
 module.exports = router;
 
 // definição de rotas
 router.get('/estabelecimentos', EstabelecimentosController.listarEstabelecimentos);
-// cadastrar
-// editar
-// excluir
+router.get("/Estabelecimentos",EstabelecimentosController.listarEstabelecimentos);
+router.post("/Estabelecimentos",EstabelecimentosController.CadastroEstabelecimentos);
+router.patch("/Estabelecimentos",EstabelecimentosController.EditarEstabelecimentos);
+router.delete("/Estabelecimentos",EstabelecimentosController.ExcluirEstabelecimentos);
+module.exports = router;
+
+// definição de rotas
+router.get("/Pessoas", PessoasController.listarPessoas); //Listar
+router.post("/Pessoas", PessoasController.CadastroPessoas); //Cadastro
+router.patch("/Pessoas", PessoasController.EditarPessoas); //Editar
+router.delete("/Pessoas", PessoasController.ExcluirPessoas); //Excluir
 
 module.exports = router;
 
 // definição de rotas
-router.get('/pessoas', PessoasController.listarPessoas);
-// cadastrar
-// editar
-// excluir
+router.get("/Servicos", ServicosController.listarServicos); //Listar
+router.post("/Servicos", ServicosController.CadastroServicos); //Cadastro
+router.patch("/Servicos", ServicosController.EditarServicos); //Editar
+router.delete("/Servicos", ServicosController.ExcluirServicos); //Excluir
 
 module.exports = router;
 
 // definição de rotas
-router.get('/servicos', ServicosController.listarServicos);
-// cadastrar
-// editar
-// excluir
-
-module.exports = router;
-
-// definição de rotas
-router.get('/telefones', TelefonesController.listarTelefones);
-// cadastrar
-// editar
-// excluir
+router.get("/Telefones", TelefonesController.listarTelefones); //Listar
+router.post("/Telefones", TelefonesController.CadastroTelefones); //Cadastro
+router.patch("/Telefones", TelefonesController.EditarTelefones); //Editar
+router.delete("/Telefones", TelefonesController.ExcluirPessoas); //Excluir
 
 module.exports = router;
